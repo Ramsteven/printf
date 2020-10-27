@@ -1,10 +1,8 @@
 #include "holberton.h"
-
 /**
  * _printf - print function
  *@format: character gives
  *Return: count characters printed.
- *
  **/
 int _printf(char *format, ...)
 {
@@ -15,7 +13,9 @@ int _printf(char *format, ...)
 
 	for (; *format; format++)
 	{
-		if (*format == '%')
+		if ((!format || *format == '%') && _strl(format) == 1)
+			return (-1);
+		if (!format)
 		{
 			format++;
 
