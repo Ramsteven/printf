@@ -1,6 +1,6 @@
-/*#include "holberton.h"
+#include "holberton.h"
 
-
+/*
 int main(void)
 {
 	_printf("hola %i %s", NULL, "mundo");
