@@ -10,7 +10,6 @@ int _printf(char *format, ...)
 	va_list Valist;
 
 	va_start(Valist, format);
-
 	if (!format || (format[0] == '%' && _strl(format) == 1))
 		return (-1);
 	for (; *format; format++)
@@ -18,12 +17,8 @@ int _printf(char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-
 			switch (*format)
 			{
-
-			case '\0':
-				return (-1);
 			case 's':
 				CharacterCount += _string(va_arg(Valist, char*));
 				break;
@@ -33,8 +28,14 @@ int _printf(char *format, ...)
 			case 'c':
 				CharacterCount += _character((char)va_arg(Valist, int));
 				break;
+			case '!':
+			case 'K':
+				_character('%');
+				_character(*format);
+				CharacterCount += 2;
+				break;
 			case '%':
-				CharacterCount += _character('%');
+				_character('%');
 				break;
 			}
 		}
@@ -44,6 +45,5 @@ int _printf(char *format, ...)
 		}
 	}
 	va_end(Valist);
-
 	return (CharacterCount);
 }
