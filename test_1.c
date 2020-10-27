@@ -23,6 +23,7 @@ int _printf(char *format, ...)
 			case 's':
 				CharacterCount += _string(va_arg(Valist, char*));
 				break;
+			case 'd':
 			case 'i':
 				CharacterCount += _integer(va_arg(Valist, int));
 				break;
