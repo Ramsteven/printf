@@ -3,7 +3,8 @@
 
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
+#include <string.h>	
+#include <unistd.h>
 
 /** printf function**/
 int _printf(char *pszFormatString, ...);
