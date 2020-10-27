@@ -1,4 +1,4 @@
-BBint main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	char co[] = "johan";
 	char caracter = 'd';
