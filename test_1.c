@@ -30,11 +30,11 @@ int _printf(char *format, ...)
 				CharacterCount += _character((char)va_arg(Valist, int));
 				break;
 			case '%':
-				_character('%');
+				CharacterCount += _character('%');
 				break;
 			default:
-				_character('%');
-				_character(format[i]);
+				CharacterCount += _character('%');
+				CharacterCount += _character(format[i]);
 				break;
 			}
 		}
