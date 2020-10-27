@@ -12,12 +12,12 @@ int _printf(char *pszFormatString, ...);
 int _putchar(char n);
 
 /*function that reverse strings*/
-void __reverse(char s[])
+void __reverse(char s[]);
 
 /* function that return lenght of a string*/	
-int _strl(char *str)
+int _strl(char *str);
 
 /* function for int to string */	
-void __itoa(int n, char s[])
+void __itoa(int n, char s[]);
 
 #endif
