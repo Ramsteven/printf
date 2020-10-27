@@ -2,7 +2,7 @@
 
 /**
  * __reverse - Function reverse
- *
+ *@s: array received
  * Return: void
  **/
 void __reverse(char s[])
@@ -20,12 +20,13 @@ void __reverse(char s[])
 
 /**
  * _strl - find size of a string
- *
+ *@str: string received
  * Return: Size integer
  **/
 int _strl(char *str)
 {
 	int i = 0;
+
 	while (str[i] != '\0')
 		i++;
 	return (i);
@@ -33,14 +34,15 @@ int _strl(char *str)
 
 /**
  * __itoa - Converts int to string
- *
+ *@n: integer received
+ *@s: char received
  * Return : void
  **/
 void __itoa(int n, char s[])
 {
-	int i, sign;
+	int i, sign = n;
 
-	if ((sign = n) < 0)
+	if ((sign) < 0)
 		n = -n;
 
 	i = 0;
