@@ -1,9 +1,9 @@
-#include "holberton.h"
+/*#include "holberton.h"
 
 
-/*int main(void)
+int main(void)
 {
-	_printf("hola %i %s", 13, "mundo");
+	_printf("hola %i %s", NULL, "mundo");
 
 	return (0);
 }*/
@@ -34,6 +34,10 @@ int _printf(char *format, ...)
 			switch (*format)
 			{
 
+			case '\0':	
+				return(-1);
+				break;
+
 			case 's':
 				pPrintString = va_arg(Valist, char *);
 				write(1, pPrintString, _strl(pPrintString));
@@ -55,6 +59,12 @@ int _printf(char *format, ...)
 				format++;
 				CharacterCount += _strl(pPrintString);
 				break;
+
+			case '%':
+                                _putchar('%');
+                                format++;
+                                CharacterCount++;
+
 			}
 		}
 		else
@@ -64,12 +74,6 @@ int _printf(char *format, ...)
 			CharacterCount++;
 		}
 	}
-
-	if(!format)
-	{
-		va_end(Valist);
-		return(NULL);
-	}	
 
 	va_end(Valist);
 
