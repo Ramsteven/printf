@@ -11,7 +11,7 @@ int _printf(char *format, ...)
 
 	va_start(Valist, format);
 
-	if (!format)
+	if (!format || (format[0] == '%' && _strl(format) == 1))
 		return (-1);
 	for (; *format; format++)
 	{
