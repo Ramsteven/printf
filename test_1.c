@@ -11,11 +11,11 @@ int _printf(char *format, ...)
 
 	va_start(Valist, format);
 
+	if (!format)
+		return (-1);
 	for (; *format; format++)
 	{
-		if ((!format || *format == '%') && _strl(format) == 1)
-			return (-1);
-		if (!format)
+		if (*format == '%')
 		{
 			format++;
 
