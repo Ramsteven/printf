@@ -24,8 +24,8 @@ int _printf(char *format, ...)
 	va_list Valist;
 
 	va_start(Valist, format);
-
-	while (*format)
+	
+	while (*format)	
 	{
 		if (*format == '%')
 		{
@@ -64,6 +64,13 @@ int _printf(char *format, ...)
 			CharacterCount++;
 		}
 	}
+
+	if(!format)
+	{
+		va_end(Valist);
+		return(NULL);
+	}	
+
 	va_end(Valist);
 
 	return (CharacterCount);
