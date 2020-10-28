@@ -4,7 +4,7 @@
  *@format: character gives
  *Return: count characters printed.
  **/
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	int CharacterCount = 0;
 	va_list Valist;
