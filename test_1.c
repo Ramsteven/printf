@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
  * _printf - print function
- *@format: character gives
- *Return: count characters printed.
- **/
+ * @format: character gives
+ * Return: count characters printed.
+ */
 int _printf(const char *format, ...)
 {
 	int CharacterCount = 0, i = 0;
