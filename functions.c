@@ -12,9 +12,9 @@ int _string(char *pPrintString)
 	return (_strl(pPrintString));
 }
 /**
-  *_integer - integer to string
-  *@PrintInteger: integer received
-  *Return: char printed
+  * _integer - integer to string
+  * @PrintInteger: integer received
+  * Return: char printed
   **/
 int _integer(int PrintInteger)
 {
