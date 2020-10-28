@@ -7,6 +7,11 @@
  */
 int _string(char *pPrintString)
 {
+	if (pPrintString == NULL)
+	{
+		pPrintString = "(null)";
+	}
+
 	write(1, pPrintString, _strl(pPrintString));
 
 	return (_strl(pPrintString));
