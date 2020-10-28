@@ -23,7 +23,7 @@ void __reverse(char s[])
  *@str: string received
  * Return: Size integer
  **/
-int _strl(char *str)
+int _strl(const char *str)
 {
 	int i = 0;
 
