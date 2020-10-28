@@ -6,9 +6,8 @@
  **/
 int _printf(const char *format, ...)
 {
-	int CharacterCount = 0;
+	int CharacterCount = 0, i = 0;
 	va_list Valist;
-	int i = 0;
 
 	va_start(Valist, format);
 	if (!format || (format[0] == '%' && _strl(format) == 1))

@@ -1,0 +1,24 @@
+.TH man 3 "27 Oct 2020" "1.0" "_printf man page"
+.SH NAME
+B. _printf \- An implementation about printf function
+.SH SYNOPSIS
+Header #include "holberton.h" is needed to run it
+.SH DESCRIPTION
+It's a clone of "printf" function in a simple way with basic functionality
+.SH USAGE
+To use _printf have to use the following parameters
+as shows below, preccedded by %symbol:
+.RS 3
+%c: Prints a character
+.RS 0
+%s: Prints a strings
+.RS 0
+%d & %i: Prints a integer
+.SH OPTIONS
+******
+.SH SEE ALSO
+printf
+.SH BUGS
+No known bugs
+.SH AUTHOR
+David Steven Ramirez Osorio, Johan Balbin
