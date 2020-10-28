@@ -3,7 +3,7 @@
 /**
   *_string- print string
   *@pPrintString: string received
-  *Return: character printed
+  *Return: char printed
   **/
 int _string(char *pPrintString)
 {
