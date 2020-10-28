@@ -4,7 +4,7 @@
  *@format: character gives
  *Return: count characters printed.
  **/
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	int CharacterCount = 0, i = 0;
 	va_list Valist;
@@ -16,26 +16,25 @@ int _printf(char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			switch (format[i + 1])
+			i++;
+			switch (format[i])
 			{
 			case 's':
 				CharacterCount += _string(va_arg(Valist, char*));
-				i++;
 				break;
 			case 'd':
 			case 'i':
 				CharacterCount += _integer(va_arg(Valist, int));
-				i++;
 				break;
 			case 'c':
 				CharacterCount += _character((char)va_arg(Valist, int));
-				i++;
 				break;
 			case '%':
 				CharacterCount += _character('%');
 				break;
 			default:
 				CharacterCount += _character('%');
+				CharacterCount += _character(format[i]);
 				break;
 			}
 		}
