@@ -14,7 +14,7 @@ int _string(char *pPrintString)
 /**
   *_integer- integer to string
   *@PrintInteger: integer received
-  *Return: charater printed
+  *Return: char printed
   **/
 int _integer(int PrintInteger)
 {
