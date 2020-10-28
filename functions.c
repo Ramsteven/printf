@@ -12,10 +12,10 @@ int _string(char *pPrintString)
 	return (_strl(pPrintString));
 }
 /**
-  * _integer - integer to string
-  * @PrintInteger: integer received
-  * Return: char printed
-  **/
+ * _integer - integer to string
+ * @PrintInteger: integer received
+ * Return: char printed
+ */
 int _integer(int PrintInteger)
 {
 	char IntegerString[10];
@@ -26,10 +26,10 @@ int _integer(int PrintInteger)
 	return (_strl(IntegerString));
 }
 /**
-  *_character-character received
-  *@c: character received
-  *Return: character printed
-  **/
+ * _character - character received
+ * @c: character received
+ * Return: character printed
+ */
 int _character(char c)
 {
 	write(1, &c, 1);
