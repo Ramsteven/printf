@@ -1,32 +1,31 @@
 #include <stdarg.h>
- 
 
 int _decimal(void)
 {
 	int n = 10; /* Argumento que pasa el "main"*/
 	int i = 1;
-	int sup;
-	int rej = 1;
+	int base;
+	int sup = 1;
 	int mod = n % 10;
 	int aux;
 
 	n /= 10;
-	sup = n;
+	base = n;
 
-	if (sup > 0)
+	if (base > 0)
 	{
-		while (sup / 10 != 0)
+		while (base / 10 != 0)
 		{
-			rej *= 10;
-			sup /= 10;
+			sup *= 10;
+			base /= 10;
 		}
-		sup = n;
-		while (rej > 0)
+		base = n;
+		while (sup > 0)
 		{
-			aux = sup / rej;
+			aux = base / sup;
 			putchar(aux + '0');
-			sup -= (aux * rej);
-			rej /= 10;
+			base -= (aux * sup);
+			sup /= 10;
 			i++;
 		}
 	}
