@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 /** printf function**/
-int _printf(char *pszFormatString, ...);
+int _printf(const char *pszFormatString, ...);
 
 /*print character function*/
 int _putchar(char n);
@@ -16,7 +16,7 @@ int _putchar(char n);
 void __reverse(char s[]);
 
 /* function that return lenght of a string*/
-int _strl(char *str);
+int _strl(const char *str);
 
 /* function for int to string */
 void __itoa(int n, char s[]);
