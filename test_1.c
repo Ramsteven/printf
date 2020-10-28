@@ -20,13 +20,16 @@ int _printf(char *format, ...)
 			{
 			case 's':
 				CharacterCount += _string(va_arg(Valist, char*));
+				i++;
 				break;
 			case 'd':
 			case 'i':
 				CharacterCount += _integer(va_arg(Valist, int));
+				i++;
 				break;
 			case 'c':
 				CharacterCount += _character((char)va_arg(Valist, int));
+				i++;
 				break;
 			case '%':
 				CharacterCount += _character('%');
