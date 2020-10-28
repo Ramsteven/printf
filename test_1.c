@@ -1,70 +1,49 @@
-int main(int argc, char *argv[])
-{
-	char co[] = "johan";
-	char caracter = 'd';
-
-	_printf(argv[0]);
-	_printf("hola %s", co);
-
-	return (0);
-}
-
+#include "holberton.h"
 /**
  * _printf - print function
- *
- * Return:
- *
+ *@format: character gives
+ *Return: count characters printed.
  **/
-int _printf(char *pszFormatString, ...)
+int _printf(char *format, ...)
 {
-	int CharacterCount = 0;
-	int PrintInteger;
-	char IntegerString[10];
-	char *pPrintString;
-	char pPrintChar;
+	int CharacterCount = 0, i = 0;
 	va_list Valist;
 
-	va_start(Valist, pszFormatString);
-
-	while (*pszFormatString)
+	va_start(Valist, format);
+	if (!format || (format[0] == '%' && _strl(format) == 1))
+		return (-1);
+	for (; format[i] != '\0'; i++)
 	{
-		if (*pszFormatString == '%')
+		if (format[i] == '%')
 		{
-			pszFormatString++;
-
-			switch (*pszFormatString)
+			switch (format[i + 1])
 			{
 			case 's':
-				pPrintString = va_arg(Valist, char *);
-				write(1, pPrintString, _strl(pPrintString));
-				pszFormatString++;
-				CharacterCount += _strl(pPrintString);
+				CharacterCount += _string(va_arg(Valist, char*));
+				i++;
 				break;
-
+			case 'd':
 			case 'i':
-				PrintInteger = va_arg(Valist, int);
-				__itoa(PrintInteger, IntegerString);
-				write(1, IntegerString, _strl(IntegerString));
-				pszFormatString++;
+				CharacterCount += _integer(va_arg(Valist, int));
+				i++;
 				break;
-
 			case 'c':
-				pPrintChar =  (char)va_arg(Valist, int);
-				/*_putchar(pPrintChar);*/
-				write(1, &pPrintChar, 1);
-				pszFormatString++;
-				CharacterCount += _strl(pPrintString);
+				CharacterCount += _character((char)va_arg(Valist, int));
+				i++;
+				break;
+			case '%':
+				CharacterCount += _character('%');
+				break;
+			default:
+				CharacterCount += _character('%');
 				break;
 			}
 		}
 		else
 		{
-			write(1, &*pszFormatString, 1);
-			pszFormatString++;
-			CharacterCount++;
+			CharacterCount += _character(format[i]);
 		}
 	}
 	va_end(Valist);
-
 	return (CharacterCount);
 }
