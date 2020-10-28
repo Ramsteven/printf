@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
-  * _string - print string
-  * @pPrintString: string received
-  * Return: char printed
-  **/
+ * _string - print string
+ * @pPrintString: string received
+ * Return: char printed
+ */
 int _string(char *pPrintString)
 {
 	write(1, pPrintString, _strl(pPrintString));
