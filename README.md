@@ -1,4 +1,4 @@
-B![](https://blog.holbertonschool.com/wp-content/uploads/2019/04/instagram_feed180.jpg)
+BB![](https://blog.holbertonschool.com/wp-content/uploads/2019/04/instagram_feed180.jpg)
 
 # Welcome to the Printf Project - C
 
@@ -21,5 +21,6 @@ Specifier  | Description
 ### We compiled trought:
 gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 ### Authors
-David Steven Henao | @daviramiz <\n>
+David Steven Henao | @daviramiz
+
 Johan Balbin | @balbinxx
