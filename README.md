@@ -1,4 +1,4 @@
-BB![](https://blog.holbertonschool.com/wp-content/uploads/2019/04/instagram_feed180.jpg)
+![](https://blog.holbertonschool.com/wp-content/uploads/2019/04/instagram_feed180.jpg)
 
 # Welcome to the Printf Project - C
 
