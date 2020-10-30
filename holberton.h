@@ -19,7 +19,7 @@ void __reverse(char s[]);
 int _strl(const char *str);
 
 /* function for int to string */
-void __itoa(int n, char s[]);
+void __itoa(long int n, char s[]);
 
 /**function string formact selector*/
 int _string(char *s);

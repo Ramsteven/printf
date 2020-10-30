@@ -38,7 +38,7 @@ int _strl(const char *str)
  * @s: char received
  * Return: void
  */
-void __itoa(int n, char s[])
+void __itoa(long int n, char s[])
 {
 	int i, sign = n;
 
